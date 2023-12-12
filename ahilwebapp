@@ -1,0 +1,28 @@
+using System.Web.Mvc;
+
+namespace YourNamespace.Controllers
+{
+    public class HomeController : Controller
+    {
+        public ActionResult Index()
+        {
+            ViewBag.Message = "Hello, Azure!";
+            return View();
+        }
+    }
+}
+@model YourNamespace.Models.HomeViewModel
+@{
+    ViewBag.Title = "Home Page";
+}
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>@ViewBag.Message</p>
+</div>
+namespace YourNamespace.Models
+{
+    public class HomeViewModel
+    {
+        // Define properties here if needed
+    }
+}
